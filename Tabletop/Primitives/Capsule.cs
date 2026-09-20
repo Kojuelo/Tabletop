@@ -280,6 +280,11 @@ namespace Kojuelo.Tabletop
         {
             return segment.GetDirectionFromB();
         }
+
+        public readonly override string ToString()
+        {
+            return $"{{{segment}, {radius}}}";
+        }
     
         public readonly override bool Equals(object obj)
         {

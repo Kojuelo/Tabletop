@@ -404,6 +404,11 @@ namespace Kojuelo.Tabletop
             yield return ca;
         }
 
+        public readonly override string ToString()
+        {
+            return $"{{{a}, {b}, {c}}}";
+        }
+
         public readonly override bool Equals(object obj)
         {
             if (obj is Triangle objTriangle)

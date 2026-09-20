@@ -329,6 +329,11 @@ namespace Kojuelo.Tabletop
             return new Bounds(xMin - widthGrowth, yMin - heightGrowth, xMax, yMax);
         }
 
+        public readonly override string ToString()
+        {
+            return $"{{{xMin}, {yMin}, {xMax}, {yMax}}}";
+        }
+
         private readonly void GetGrowth(float xFactor, float yFactor, out float widthGrowth, out float heightGrowth)
         {
             var thisWidth = width;

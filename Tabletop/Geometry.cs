@@ -7,7 +7,7 @@ namespace Kojuelo.Tabletop
 {
     public static class Geometry
     {
-        private const float EPSILON = 0.00001f;
+        public const float EPSILON = 0.00001f;
 
         private const float INTERSECTION_EPSILON = 0.00001f;
 

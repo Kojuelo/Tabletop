@@ -91,6 +91,11 @@ namespace Kojuelo.Tabletop
 
             return new Point(GetXAtY(y), y);
         }
+
+        public readonly override string ToString()
+        {
+            return $"{{{yMultiplier}, {xMultiplier}, {constant}}}";
+        }
     
         public readonly override bool Equals(object obj)
         {

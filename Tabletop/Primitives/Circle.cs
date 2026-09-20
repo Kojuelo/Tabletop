@@ -115,6 +115,11 @@ namespace Kojuelo.Tabletop
         {
             return GetTranslated(direction.GetTranslation(length));
         }
+
+        public readonly override string ToString()
+        {
+            return $"{{{center}, {radius}}}";
+        }
     
         public readonly override bool Equals(object obj)
         {

@@ -293,6 +293,11 @@ namespace Kojuelo.Tabletop
         {
             return new Direction(b, a);
         }
+
+        public readonly override string ToString()
+        {
+            return $"{{{a}, {b}}}";
+        }
     
         public readonly override bool Equals(object obj)
         {

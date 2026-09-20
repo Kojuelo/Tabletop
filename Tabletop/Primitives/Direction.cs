@@ -339,6 +339,11 @@ namespace Kojuelo.Tabletop
             }
         }
 
+        public readonly override string ToString()
+        {
+            return $"{normal}";
+        }
+
         public readonly override bool Equals(object obj)
         {
             if (obj is Direction objDirection)

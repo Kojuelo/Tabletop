@@ -21,13 +21,13 @@ namespace Kojuelo.Tabletop
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(Point a, Point b)
         {
-            return (a.x == b.x) && (a.y == b.y);
+            return (MathF.Abs(a.x - b.x) < Geometry.EPSILON) && (MathF.Abs(a.y - b.y) < Geometry.EPSILON);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(Point a, Point b)
         {
-            return (a.x != b.x) || (a.y != b.y);
+            return (MathF.Abs(a.x - b.x) >= Geometry.EPSILON) || (MathF.Abs(a.y - b.y) >= Geometry.EPSILON);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -171,6 +171,11 @@ namespace Kojuelo.Tabletop
         public readonly Point GetRotatedDegrees(in Point pivot, float rotationDegrees)
         {
             return GetRotatedRadians(pivot, AngleUtility.DegreesToRadians(rotationDegrees));
+        }
+
+        public readonly override string ToString()
+        {
+            return $"{{{x}, {y}}}";
         }
 
         public readonly override bool Equals(object obj)
